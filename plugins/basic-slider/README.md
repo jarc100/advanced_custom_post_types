@@ -80,4 +80,4 @@ Configuring and Editing Files
 
 If you need more control over the slider output see the template.php file and make edits there. There are a few places you can edit HTML without breaking anything and should be apparent (like the wrapper vars). You will want to do the more than likely simple because jQuery sliders require different types of HTML and classes to work.
 
-The only issues with editing these files is of course when an update made on the plugin and you may have conflicts. I recommend renaming the plugin to avoid your custom changes being removed an an update.
+The only issues with editing these files is of course when an update is made on the plugin and you may have conflicts. I recommend renaming the plugin to avoid your custom changes being removed on an update.
