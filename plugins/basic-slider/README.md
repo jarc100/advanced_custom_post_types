@@ -65,3 +65,19 @@ $settings = array(
 - alt: defines if the alt attr should be used (slide title is always the alt)
 - caption_classes: sets the caption html classes
 - classes: sets the ul elements classess
+
+Shortcode
+==
+
+If you need to add a slider within a post you can do so with the shortcode.
+
+```php
+[slider width="940" height="350" group="example"]
+```
+
+Configuring and Editing Files
+==
+
+If you need more control over the slider output see the template.php file and make edits there. There are a few places you can edit HTML without breaking anything and should be apparent (like the wrapper vars). You will want to do the more than likely simple because jQuery sliders require different types of HTML and classes to work.
+
+The only issues with editing these files is of course when an update made on the plugin and you may have conflicts. I recommend renaming the plugin to avoid your custom changes being removed an an update.
