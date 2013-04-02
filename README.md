@@ -12,13 +12,15 @@ New to WordPress? Use Plugins!
 Usage
 ===
 
-Use a php include to add the file init.php to your plugin or functions.php theme file. For more advanced users look at the code comments for help on what args are available. ACPT also comes with its own plugin system so you don't have to muck up your functions.php file and can import others work with ease.
+1) Use a php include to add the file init.php to your plugin or functions.php theme file. For more advanced users look at the code comments for help on what args are available. ACPT also comes with its own plugin system so you don't have to muck up your functions.php file and can import others work with ease.
 
 ```php
 include('acpt/init.php');
 ```
 
-For custom settings see the config.php file. Set DEV_MODE to true for forms API help.
+2) Copy and rename sample-config.php to config.php
+
+For custom settings see the config.php file. Set DEV_MODE to true for forms API help when theming.
 
 ```php
 define('DEV_MODE', true);
@@ -188,6 +190,10 @@ function meta_details() {
 	$form->textarea('address',array('label' => 'Textarea'));
 	$form->select('rooms', array('one', 'two', 'three'), array('label' => 'Select List'));
 	$form->radio('baths', array('blue', 'green', 'red'), array('label' => 'Radio Buttons'));
+
+    // When outputting editor data you may want to apply "the_content" filter
+    // apply_filters('the_content', $content_var)
+    // note that $content_var must be set to the content by you manually
 	$form->editor('baths', 'WYSIWYG Editor');
 }
 ```
